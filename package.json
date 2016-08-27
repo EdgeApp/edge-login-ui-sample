@@ -1,0 +1,36 @@
+{
+  "name": "airbitz-core-js-sample",
+  "version": "1.0.0",
+  "description": "Airbitz JS UI sample webpage",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+   "express": "^4.14.0",
+    "airbitz-core-js-ui": "file:../airbitz-core-js-ui",
+    "webpack": "^2.0.0-beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Airbitz/airbitz-core-js-sample.git"
+  },
+  "keywords": [
+    "airbitz",
+    "bitcoin",
+    "javascript",
+    "ui",
+    "edgesecurity"
+  ],
+  "author": "Tim Horton, Paul Puey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Airbitz/airbitz-core-js-sample/issues"
+  },
+  "homepage": "https://github.com/Airbitz/airbitz-core-js-sample#readme",
+  "scripts": {
+    "build": "webpack",
+    "start": "node server.js"
+  }
+}
