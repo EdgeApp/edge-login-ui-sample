@@ -49,7 +49,7 @@
       </table>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <script src="/abcui/abcui.js"></script>
+    <script src="/abcui/build/abcui.js"></script>
     <script>
         var _account = null;
         var _abcUi = null;
@@ -57,7 +57,7 @@
         _abcUi = abcui.makeABCUIContext({
             'apiKey': 'd98e26ce95d1a1ceb76be0f373fd2b1af29335e8',
             'accountType': 'account:repo:com.mydomain.myapp',
-            'bundlePath': '/ui'
+            'bundlePath': '/abcui/build'
         });
         function updateUi() {
           if (_abcUi == null) {
