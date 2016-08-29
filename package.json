@@ -9,7 +9,7 @@
   },
   "dependencies": {
    "express": "^4.14.0",
-    "airbitz-core-js-ui": "file:../airbitz-core-js-ui",
+    "airbitz-core-js-ui": "git@github.com:Airbitz/airbitz-core-js-ui.git",
     "webpack": "^2.0.0-beta"
   },
   "repository": {
