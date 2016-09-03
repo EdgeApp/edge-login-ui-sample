@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/Airbitz/airbitz-core-js-sample#readme",
   "scripts": {
-    "prebuild": "cd node_modules/airbitz-core-js-ui && npm install && npm run prebuild",
+    "postinstall": "cd node_modules/airbitz-core-js-ui && npm install && npm run prebuild",
     "build": "webpack",
     "start": "node server.js"
   }
