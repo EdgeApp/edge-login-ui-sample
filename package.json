@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Airbitz JS UI sample webpage",
   "main": "server.js",
-  "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
-  },
   "dependencies": {
    "express": "^4.14.0",
     "airbitz-core-js-ui": "git@github.com:Airbitz/airbitz-core-js-ui.git",
@@ -32,6 +28,7 @@
   },
   "homepage": "https://github.com/Airbitz/airbitz-core-js-sample#readme",
   "scripts": {
+    "prebuild": "cd node_modules/airbitz-core-js-ui && npm install && npm run prebuild",
     "build": "webpack",
     "start": "node server.js"
   }
