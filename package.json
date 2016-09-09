@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/Airbitz/airbitz-core-js-sample#readme",
   "scripts": {
-    "postinstall": "cd node_modules/airbitz-core-js-ui && npm install && npm run prebuild",
-    "build": "webpack",
+    "build": "mkdir -p build/abcui && npm run -s build:copy",
+    "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",
     "start": "node server.js"
   }
 }
