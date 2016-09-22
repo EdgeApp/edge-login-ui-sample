@@ -20,8 +20,7 @@
               <!--<button type="button" id="apiKeySubmit" class="btn btn-default">Submit</button>-->
           <!--</form>-->
           <ul class="nav navbar-nav navbar-right logged_out">
-              <li><a href="javascript://" id="login">Login</a></li>
-              <li><a href="javascript://" id="register">Register</a></li>
+              <li><a href="javascript://" id="login">Login / Sign Up</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right logged_in" style="display:hidden">
               <li><a href="javascript://" id="account">Manage Account</a></li>
@@ -35,7 +34,7 @@
           <h2>Welcome to the Airbitz Javascript Core Demo Webapp</h2>
           <p>This is a sample web app that implements the <b>airbitz-core-js-ui</b> library for account authentication and private key management</p>
           <p>You are currently logged out</p>
-          <p>Please click [Login] or [Register].</p>
+          <p>Please click [Login / Sign Up].</p>
       </div>
     </div>
     <div class="container logged_in" style="display:hidden">
@@ -58,9 +57,9 @@
     <script>
         var _account = null;
         var _abcUi = null;
-        // Replace 'd98e26ce95d1a1ceb76be0f373fd2b1af29335e8' with your own API key from https://developer.airbitz.co
+        // Replace '0b5776a91bf409ac10a3fe5f3944bf50417209a0' with your own API key from https://developer.airbitz.co
         _abcUi = abcui.makeABCUIContext({
-            'apiKey': 'd98e26ce95d1a1ceb76be0f373fd2b1af29335e8',
+            'apiKey': '0b5776a91bf409ac10a3fe5f3944bf50417209a0',
             'accountType': 'account:repo:com.mydomain.myapp',
             'bundlePath': 'abcui',
             'vendorName': 'AirbitzUITest'
@@ -84,12 +83,6 @@
 //            _abcUi = abcui.AbcUi({'key': $('#apiKey').val(), 'bundle-path': '/ui'});
             $('#login').click(function() {
               _abcUi.openLoginWindow(function(error, account) {
-                _account = account;
-                updateUi();
-              });
-            });
-            $('#register').click(function() {
-              _abcUi.openRegisterWindow(function(error, account) {
                 _account = account;
                 updateUi();
               });
