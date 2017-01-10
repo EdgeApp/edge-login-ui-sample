@@ -54,54 +54,8 @@
     </div>
     <script src="abcui/assets/dist/jquery/dist/jquery.min.js"></script>
     <script src="abcui/assets/js/abcui.js"></script>
+    <script src="sampleapp.js"></script>
     <script>
-        var _account = null;
-        var _abcUi = null;
-        // Replace '0b5776a91bf409ac10a3fe5f3944bf50417209a0' with your own API key from https://developer.airbitz.co
-        _abcUi = abcui.makeABCUIContext({
-            'apiKey': '0b5776a91bf409ac10a3fe5f3944bf50417209a0',
-            'accountType': 'account:repo:com.mydomain.myapp',
-            'bundlePath': 'abcui',
-            'vendorName': 'Chain Net',
-            'vendorImageUrl': 'https://airbitz.co/go/wp-content/uploads/2016/10/GenericEdgeLoginIcon.png'
-        });
-        function updateUi() {
-          if (_abcUi == null) {
-            $('.logged_out').hide();
-            $('.logged_in').hide();
-          } else if (_account == null) {
-            $('.logged_out').show();
-            $('.logged_in').hide();
-          } else {
-            $('.logged_out').hide();
-            $('.logged_in').show();
-            $('#username').text(_account.username);
-            $('#key').text(_account.repoInfo.dataKey.toString('base64'));
-          }
-        }
-//        $(function() {
-//          $('#apiKeySubmit').click(function() {
-//            _abcUi = abcui.AbcUi({'key': $('#apiKey').val(), 'bundle-path': '/ui'});
-            $('#login').click(function() {
-              _abcUi.openLoginWindow(function(error, account) {
-                _account = account;
-                updateUi();
-              });
-            });
-            $('#logout').click(function() {
-              _account.logout();
-              _account = null;
-              updateUi();
-            });
-            $('#account').click(function() {
-              _abcUi.openManageWindow(_account, function(error) {
-                updateUi();
-              });
-            });
-            updateUi();
-//        });
-//        updateUi();
-//      });
     </script>
   </body>
 </html>

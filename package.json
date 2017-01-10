@@ -4,11 +4,19 @@
   "description": "Airbitz JS UI sample webpage",
   "main": "server.js",
   "dependencies": {
-   "express": "^4.14.0",
-    "airbitz-core-js-ui": "^0.0.1",
-    "webpack": "^2.0.0-beta",
+    "airbitz-core-js-ui": "^0.0.14",
     "bootstrap": "^3.3.7",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "secure-random": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "express": "^4.14.0",
+    "webpack": "^2.0.0-beta",
+    "json-loader": "^0.5.4"
   },
   "repository": {
     "type": "git",
@@ -34,7 +42,8 @@
   },
   "homepage": "https://airbitz.co",
   "scripts": {
-    "build": "mkdir -p build/abcui && npm run -s build:copy",
+    "build": "webpack && npm run -s build:abcui",
+    "build:abcui": "mkdir -p build/abcui && npm run -s build:copy",
     "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",
     "start": "node server.js"
   }
