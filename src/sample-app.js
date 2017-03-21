@@ -46,7 +46,8 @@ $('#login').click(function () {
         ethereumKey: new Buffer(secureRandom(32)).toString('hex')
       }
       account.createWallet(walletType, keys, function (err, id) {
-        if (err) {
+        if (error) {
+          console.log(error)
         } else {
           _wallet = account.getWallet(id)
           _key = _wallet.keys.ethereumKey
