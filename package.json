@@ -42,6 +42,7 @@
   },
   "homepage": "https://airbitz.co",
   "scripts": {
+    "lint": "standard './*.js' 'src/*.js'",
     "build": "webpack && npm run -s build:abcui",
     "build:abcui": "mkdir -p build/abcui && npm run -s build:copy",
     "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",

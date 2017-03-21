@@ -1,3 +1,4 @@
+/* global $ */
 var abcui = require('airbitz-core-js-ui')
 var secureRandom = require('secure-random')
 
@@ -33,6 +34,9 @@ function updateUi () {
 
 $('#login').click(function () {
   _abcUi.openLoginWindow(function (error, account) {
+    if (error) {
+      console.log(error)
+    }
     _account = account
 
     const abcWallet = account.getFirstWallet(walletType)
@@ -68,6 +72,9 @@ $('#logout').click(function () {
 
 $('#account').click(function () {
   _abcUi.openManageWindow(_account, function (error) {
+    if (error) {
+      console.log(error)
+    }
     updateUi()
   })
 })
