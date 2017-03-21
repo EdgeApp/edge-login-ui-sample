@@ -1,8 +1,4 @@
-/*eslint-disable no-var */
-
-var fs = require('fs');
-var path = require('path');
-var webpack = require('webpack');
+/* eslint-disable no-var */
 
 module.exports = {
   entry: {
@@ -11,13 +7,15 @@ module.exports = {
   output: {
     filename: 'build/[name].js',
     // Export the library as a global var:
-    libraryTarget: "var",
+    libraryTarget: 'var',
     // Name of the global var:
-    library: "[name]"  },
+    library: '[name]'
+  },
 
   module: {
     loaders: [
-      { test: /\.js$/,
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -26,5 +24,5 @@ module.exports = {
         loader: 'json-loader'
       }
     ]
-  },
+  }
 }
