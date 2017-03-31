@@ -1,62 +1,94 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Augur Key Extractor</title>
-      <link rel="stylesheet" href="bootstrap.min.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Augur Key Extractor</a>
-        </div>
-        <div id="navbar">
-          <!--<form class="navbar-form navbar-left">-->
-              <!--<div class="form-group">-->
-                <!--<input type="text" id="apiKey" class="form-control" placeholder="API key">-->
-              <!--</div>-->
-              <!--<button type="button" id="apiKeySubmit" class="btn btn-default">Submit</button>-->
-          <!--</form>-->
-          <ul class="nav navbar-nav navbar-right logged_out">
-              <li><a href="javascript://" id="login">Login / Sign Up</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right logged_in" style="display:hidden">
-              <li><a href="javascript://" id="account">Manage Account</a></li>
-              <li><a href="javascript://" id="logout">Logout</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container logged_out">
-      <div class="text-center">
-          <h2>Welcome to the Augur key extractor</h2>
-          <p>This utility will allow you to log in with your username and password to retrieve any Ethereum keys stored within the Airbitz v1 Edge Login system. To retrieve keys stored within the v2 Edge Login system, please log into the normal Augur app and use the "Download Account Key File" feature.</p>
-          <p>You are currently logged out</p>
-          <p>Please click [Login / Sign Up].</p>
-      </div>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Augur Key Recovery Tool</title>
+  <style>
+        body {
+            margin:0px;
+            padding:0px;
+            color: black;
+            font-family:arial, sans-serif;
+            text-decoration:none;
+            text-align:center;
+            line-height:1.8em;
+        }
+        /*augur logo*/
+        #augur {
+            background-image:url("logo.png");
+            background-position:top left;
+            height:200px;
+            width:560px;
+            padding:0px;
+            margin:100px auto 0;
+            color: white;
+            font-size: 1px;
+        }
+        /*media query shrink logo*/
+        @media screen and (max-width: 560px) {
+          #augur { width: 210px; }
+        }
+        /*Page content*/
+        #content {
+            max-width:600px;
+            padding-left:20px;
+            padding-right:20px;
+            margin:auto;
+        }
+        p {
+          text-align:justify;
+        }
+        a {
+          color:#6A053D;
+        }
+        #key {
+          font-weight:bold;
+        }
+        /*button*/
+        p.button a{
+          padding:10px;
+          background-color:#6A053D;
+          border-radius:5px;
+          -moz-border-radius:5px;
+          -webkit-border-radius:5px;
+          text-decoration:none;
+          color:white;
+        }
+        p.button {
+          text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <div id=augur>Augur</div>
+  </header>
+  <div id=content>
+    <h1>Key Recovery Tool</h1>
+    <div class="logged_out">
+      <p>As of early April 2017, Airbitz has replaced their proof-of-concept Edge Login system with a production-ready system.
+        This means that private keys stored in the proof-of-concept system are no longer accessible through the Augur app
+        directly. If you have accidentally sent real Ether or Rep to a private key stored in the old system, this tool will
+        allow you to retrieve it.</p>
+      <p>To retrieve keys stored in the current system, please go to the Augur app and use the "Download Account Key File" feature
+        instead.
+      </p>
+      <p class=button><a href="javascript://" id="login">Log In</a></p>
     </div>
-    <div class="container logged_in" style="display:hidden">
-      <table class="table table-striped">
-          <tr>
-              <td colspan="2"><b>Congratulation! You are logged in via Airbitz</b></td>
-          </tr>
-        <tr>
-          <td>Username:</td>
-          <td><span id="username"></span></td>
-        </tr>
-        <tr>
-          <td>Ethereum Key:</td>
-          <td><span id="key"></span></td>
-        </tr>
-      </table>
-      <p>You can paste this key into <a href="https://myetherwallet.com/#send-transaction">MyEtherWallet</a> to claim any funds it may contain.</p>
+    <div class="logged_in">
+      <p>Welcome, <span id="username"></span>. Your private key is:</p>
+      <p><span id="key"></span></p>
+      <p>You can paste this key into <a href="https://myetherwallet.com/#send-transaction">MyEtherWallet</a> to claim any funds
+        it may contain.</p>
+      <p class=button><a href="javascript://" id="logout">Log Out</a></p>
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="abcui/assets/abcui.js"></script>
-    <script src="sampleapp.js"></script>
-    <script>
-    </script>
-  </body>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="abcui/assets/abcui.js"></script>
+  <script src="sampleapp.js"></script>
+</body>
+
 </html>
