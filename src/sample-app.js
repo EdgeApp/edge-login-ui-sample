@@ -11,7 +11,7 @@ const walletType = 'wallet:repo:airbitz-test'
 // Replace '0b5776a91bf409ac10a3fe5f3944bf50417209a0' with your own API key from https://developer.airbitz.co
 _abcUi = abcui.makeABCUIContext({
   apiKey: '0b5776a91bf409ac10a3fe5f3944bf50417209a0',
-  accountType: 'account:repo:com.mydomain.myapp',
+  appId: 'com.mydomain.myapp',
   bundlePath: 'abcui',
   vendorName: 'Chain Net',
   vendorImageUrl: 'https://airbitz.co/go/wp-content/uploads/2016/10/GenericEdgeLoginIcon.png'
