@@ -16,7 +16,8 @@
     "babel-loader": "^6.2.4",
     "express": "^4.14.0",
     "webpack": "^2.0.0-beta",
-    "json-loader": "^0.5.4"
+    "json-loader": "^0.5.4",
+    "standard": "*"
   },
   "repository": {
     "type": "git",

@@ -43,9 +43,9 @@ $('#login').click(function () {
     if (abcWallet == null) {
       // Create an ethereum wallet if one doesn't exist:
       const keys = {
-        ethereumKey: new Buffer(secureRandom(32)).toString('hex')
+        ethereumKey: Buffer.alloc(secureRandom(32)).toString('hex')
       }
-      account.createWallet(walletType, keys, function (err, id) {
+      account.createWallet(walletType, keys, function (error, id) {
         if (error) {
           console.log(error)
         } else {
