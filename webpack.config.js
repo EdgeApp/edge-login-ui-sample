@@ -1,27 +1,26 @@
-/* eslint-disable no-var */
+const path = require('path')
 
 module.exports = {
+  devServer: {
+    contentBase: './public',
+    port: 8001
+  },
+
   entry: {
     sampleapp: './src/sample-app.js'
   },
+
   output: {
-    filename: 'build/[name].js',
-    // Export the library as a global var:
-    libraryTarget: 'var',
-    // Name of the global var:
-    library: '[name]'
+    path: path.join(__dirname, 'public'),
+    filename: '[name].js'
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   }

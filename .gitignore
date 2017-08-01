@@ -1,6 +1,6 @@
 .idea/
 *.swp
-/build/abcui
-/build/sampleapp.js
+/public/abcui
+/public/sampleapp.js
 /node_modules
 npm-debug.log

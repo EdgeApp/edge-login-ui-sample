@@ -27,11 +27,12 @@
     "url": "git+https://github.com/Airbitz/airbitz-core-js-sample.git"
   },
   "scripts": {
+    "build:abcui": "mkdir -p public/abcui && npm run -s build:copy",
+    "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets public/abcui/",
     "build": "webpack && npm run -s build:abcui",
-    "build:abcui": "mkdir -p build/abcui && npm run -s build:copy",
-    "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",
     "lint": "standard './*.js' 'src/*.js'",
-    "start": "node server.js"
+    "prepare": "npm run build",
+    "start": "webpack-dev-server --open"
   },
   "dependencies": {
     "airbitz-core-js-ui": "0.1.3",
@@ -45,8 +46,8 @@
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
     "express": "^4.14.0",
-    "json-loader": "^0.5.4",
-    "webpack": "^2.0.0-beta"
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "private": true
 }
