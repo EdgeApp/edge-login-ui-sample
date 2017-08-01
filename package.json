@@ -1,8 +1,38 @@
 {
   "name": "airbitz-core-js-sample",
   "version": "0.0.1",
-  "description": "Airbitz JS UI sample webpage",
+  "description": "Airbitz JS UI sample app",
+  "keywords": [
+    "airbitz",
+    "bitcoin",
+    "blockchain",
+    "ethereum",
+    "javascript",
+    "ui"
+  ],
+  "homepage": "https://airbitz.co",
+  "bugs": {
+    "url": "https://github.com/Airbitz/airbitz-core-js-sample/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Airbitz, Inc.",
+  "contributors": [
+    "Paul Puey <paul@airbitz.co>",
+    "William Swanson <william@airbitz.co>",
+    "Tim Horton <tim@airbitz.co>"
+  ],
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Airbitz/airbitz-core-js-sample.git"
+  },
+  "scripts": {
+    "build": "webpack && npm run -s build:abcui",
+    "build:abcui": "mkdir -p build/abcui && npm run -s build:copy",
+    "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",
+    "lint": "standard './*.js' 'src/*.js'",
+    "start": "node server.js"
+  },
   "dependencies": {
     "airbitz-core-js-ui": "0.1.3",
     "bootstrap": "^3.3.7",
@@ -15,37 +45,8 @@
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
     "express": "^4.14.0",
-    "webpack": "^2.0.0-beta",
-    "json-loader": "^0.5.4"
+    "json-loader": "^0.5.4",
+    "webpack": "^2.0.0-beta"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Airbitz/airbitz-core-js-sample.git"
-  },
-  "keywords": [
-    "airbitz",
-    "bitcoin",
-    "ethereum",
-    "javascript",
-    "ui",
-    "edgesecurity"
-  ],
-  "author": "Airbitz, Inc.",
-  "contributors": [
-    "Paul Puey <paul@airbitz.co>",
-    "William Swanson <william@airbitz.co>",
-    "Tim Horton <tim@airbitz.co>"
-  ],
-  "license": "SEE LICENSE IN LICENSE",
-  "bugs": {
-    "url": "https://github.com/Airbitz/airbitz-core-js-sample/issues"
-  },
-  "homepage": "https://airbitz.co",
-  "scripts": {
-    "lint": "standard './*.js' 'src/*.js'",
-    "build": "webpack && npm run -s build:abcui",
-    "build:abcui": "mkdir -p build/abcui && npm run -s build:copy",
-    "build:copy": "rsync -avz node_modules/airbitz-core-js-ui/assets build/abcui/",
-    "start": "node server.js"
-  }
+  "private": true
 }
