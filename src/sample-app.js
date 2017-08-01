@@ -1,6 +1,7 @@
 /* global $ */
 var abcui = require('airbitz-core-js-ui')
 var secureRandom = require('secure-random')
+const { base16 } = require('rfc4648')
 
 var _account = null
 var _wallet = null
@@ -43,11 +44,11 @@ $('#login').click(function () {
     if (abcWallet == null) {
       // Create an ethereum wallet if one doesn't exist:
       const keys = {
-        ethereumKey: new Buffer(secureRandom(32)).toString('hex')
+        ethereumKey: base16.stringify(secureRandom(32))
       }
-      account.createWallet(walletType, keys, function (err, id) {
-        if (error) {
-          console.log(error)
+      account.createWallet(walletType, keys, function (e, id) {
+        if (e) {
+          console.log(e)
         } else {
           _wallet = account.getWallet(id)
           _key = _wallet.keys.ethereumKey
