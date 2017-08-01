@@ -7,7 +7,7 @@ module.exports = {
   },
 
   entry: {
-    sampleapp: './src/sample-app.js'
+    sampleapp: './src/web/index.js'
   },
 
   output: {
