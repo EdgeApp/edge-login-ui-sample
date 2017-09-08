@@ -48,6 +48,7 @@
     "babel-loader": "^6.2.4",
     "husky": "^0.14.3",
     "standard": "^10.0.2",
+    "updot": "^1.1.4",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
