@@ -37,7 +37,7 @@
     "updot": "updot"
   },
   "dependencies": {
-    "airbitz-core-js-ui": "0.1.3",
+    "airbitz-core-js-ui": "git+https://github.com/Airbitz/airbitz-core-js-ui.git#develop",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.0",
     "rfc4648": "^1.0.0",
@@ -51,7 +51,7 @@
     "standard": "^10.0.2",
     "updot": "^1.1.4",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
+    "webpack-dev-server": "^2.7.1"
   },
   "private": true
 }
