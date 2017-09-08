@@ -33,7 +33,8 @@
     "lint": "standard '*.js' 'src/**/*.js'",
     "precommit": "npm run lint",
     "prepare": "npm run build",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "updot": "updot"
   },
   "dependencies": {
     "airbitz-core-js-ui": "0.1.3",
