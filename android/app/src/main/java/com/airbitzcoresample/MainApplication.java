@@ -3,8 +3,8 @@ package com.airbitzcoresample;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.oblador.vectoricons.VectorIconsPackage;
 import co.airbitz.AbcCoreJsUi.AbcCoreJsUiPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.rnfs.RNFSPackage;
 import co.airbitz.fastcrypto.RNFastCryptoPackage;
@@ -28,8 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new VectorIconsPackage(),
             new AbcCoreJsUiPackage(),
+            new VectorIconsPackage(),
             new RandomBytesPackage(),
             new RNFSPackage(),
             new RNFastCryptoPackage()
