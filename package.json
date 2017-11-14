@@ -36,8 +36,8 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "airbitz-core-js-ui": "git+ssh://git@github.com/Airbitz/airbitz-core-js-ui.git#react-native",
-    "airbitz-core-react-native": "git+ssh://git@github.com/airbitz/airbitz-core-react-native.git",
+    "airbitz-core-js-ui": "Airbitz/airbitz-core-js-ui.git#react-native",
+    "airbitz-core-react-native": "Airbitz/airbitz-core-react-native.git",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.0",
     "react": "16.0.0-alpha.12",
