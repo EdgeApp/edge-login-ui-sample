@@ -1,6 +1,6 @@
-# Airbitz Javascript UI Sample
+# Edge Login Javascript UI Sample
 
-This is a simple HTML webpage, using node server, that uses [airbitz-core-js-ui](https://github.com/Airbitz/airbitz-core-js-ui)
+This is a simple HTML webpage, using the node server, that uses the HTML version of [edge-login-ui](https://github.com/Airbitz/edge-login-ui)
 
 `npm install` to fetch the dependencies.
 
